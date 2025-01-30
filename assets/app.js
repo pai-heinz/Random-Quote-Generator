@@ -17,3 +17,11 @@ btn.addEventListener("click", () => {
     })
     .catch((reject) => {});
 });
+
+let speech = document.getElementById("speech");
+speech.addEventListener("click", (_) => {
+  let txtToSpeech = new SpeechSynthesisUtterance(
+    `${quote_txt.innerText} ${author.innerText}`
+  );
+  speechSynthesis.speak(txtToSpeech);
+});
