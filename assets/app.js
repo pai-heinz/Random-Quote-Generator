@@ -25,3 +25,8 @@ speech.addEventListener("click", (_) => {
   );
   speechSynthesis.speak(txtToSpeech);
 });
+
+let copy = document.getElementById("copy");
+copy.addEventListener("click", (_) => {
+  navigator.clipboard.writeText(quote_txt.innerText);
+});
